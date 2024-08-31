@@ -1,7 +1,7 @@
 import { IPost } from "../../../domain/post";
-import { IPostRepository } from "../../../usecase/interface/repository/IpostRepository";
+import { IPostRepository } from "../../../usecase/usecase/interface/repository/IpostRepository";
 import PostModel from "../models/post";
-import { addPost } from "./post/addPost";
+import {addPost,findById} from './post'
 
 
 export class PostRepository implements IPostRepository {
@@ -10,8 +10,12 @@ export class PostRepository implements IPostRepository {
         private readonly postModel: typeof PostModel
     ){}
 
-    addPost(postData: IPost): Promise<IPost | null>{
+    addPost(postData: IPost){
         return addPost(postData, this.postModel);
+    }
+
+    findById(postId:string){
+        return  findById({postId,postModel:this.postModel})
     }
 
 }

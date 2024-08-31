@@ -1,47 +1,42 @@
 // src/domain/comments/comments.model.ts
 
 import mongoose, { Schema, Document } from "mongoose";
-import { IPostComment } from "../../../domain/comments";
+import { IComment } from "../../../domain/comments";
 
-// Define schema for CommentedUser
-const commentedUserSchema: Schema = new Schema({
-    userId: {
-        type: String,
-        required: true
+
+
+// Define schema for IComment
+const commentSchema: Schema<IComment & Document> = new Schema<IComment & Document>({
+    
+    text:{
+        type:String,
+        required:true
     },
-    commentedAt: {
-        type: Date,
-        required: true
+    parentId:{
+        type: String || null,
+        default:null,
+        ref:'Comment'
+    },
+    postId:{
+        type:String,
+        required:true,
+        ref:'Post'
+    },
+    userId:{
+        type:String,
+        required:true,
+        ref:'User'
+    },
+    replys:{
+        type:Number,
+        default:0
     }
-});
-
-// Define schema for CommentReply
-const commentReplySchema: Schema = new Schema({
-    commentText: {
-        type: String,
-        required: true
-    },
-    commentedByUsers: [commentedUserSchema]
-});
-
-// Define schema for IPostComment
-const postCommentSchema: Schema<IPostComment & Document> = new Schema<IPostComment & Document>({
-    postId: {
-        type: String,
-        required: true
-    },
-    commentText: {
-        type: String,
-        required: true
-    },
-    commentedByUsers: [commentedUserSchema],
-    replies: [commentReplySchema]
 }, {
     timestamps: true 
 });
 
 // Create a model for the PostComment schema
-const PostCommentModel = mongoose.model<IPostComment & Document>("PostComment", postCommentSchema);
+const CommentModel = mongoose.model<IComment & Document>("Comment", commentSchema);
 
 // Export the PostCommentModel
-export default PostCommentModel;
+export default CommentModel;

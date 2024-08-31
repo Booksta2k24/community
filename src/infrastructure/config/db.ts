@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import "dotenv/config";
 import ErrorResponse from "../../usecase/handler/errorResponse";
 
+
 // Define an async function to connect to the MongoDB database
 export async function connectDB() {
     try {
