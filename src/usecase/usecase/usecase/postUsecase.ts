@@ -1,4 +1,5 @@
 import { IPost } from '../../../domain/post';
+import { File } from '../../../domain/types/file';
 import { ICommentRepository } from '../interface/repository/ICommentRepository';
 import { IPostLikeRepository } from '../interface/repository/IpostLikeRepository';
 import { IPostRepository } from '../interface/repository/IpostRepository';
@@ -36,7 +37,7 @@ export class PostUsecase {
         this._commentRepository = commentRepository;
     }
 
-    addPost(postData: IPost, postImages: Express.Multer.File[]) {
+    addPost(postData: IPost, postImages: File[]) {
         return addPost(
             postData,
             postImages,

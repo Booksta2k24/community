@@ -1,7 +1,7 @@
 
 import { File } from './../domain/types/file';
 import { Next, Req, Res } from "../infrastructure/types/expressTypes";
-import { PostUsecase } from "../usecase/usecase/postUsecase";
+import { PostUsecase } from '../usecase/usecase/usecase/postUsecase';
 
 // Class to handle the adding of a post
 export class PostAdapter {

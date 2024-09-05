@@ -1,5 +1,5 @@
 // fileTypes.ts
-export interface File {
+export interface File{
     fieldname: string;
     originalname: string;
     encoding: string;
