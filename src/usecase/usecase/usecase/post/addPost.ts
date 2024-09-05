@@ -1,4 +1,5 @@
 import { IPost } from "../../../../domain/post";
+import { File } from "../../../../domain/types/file";
 import { HttpStatusCode } from "../../../../domain/types/httpStatusCodes";
 import { ImageObj } from "../../../../domain/types/imageObj";
 import ErrorResponse from "../../../handler/errorResponse";
@@ -8,7 +9,7 @@ import { IResponse } from "../../interface/services/IResponse";
 
 export const addPost = async(
     postData: IPost,
-    postImages: Express.Multer.File[],
+    postImages: File[],
     postRepository: IPostRepository,
     cloudinary: ICloudinary
 ): Promise<IResponse> => {

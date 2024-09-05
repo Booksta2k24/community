@@ -24,3 +24,4 @@ const postUsecase = new PostUsecase({
 const postAdapter = new PostAdapter(postUsecase);
 
 export { postAdapter, postRepository };
+

@@ -6,22 +6,29 @@ import { IPostRepository } from '../../interface/repository/IpostRepository';
 
 export const addComment = async ({
     postRepository,
-    commetnRepository,
+    commentRepository,
     text,
     postId,
     userId,
     parentId,
 }: {
     postRepository: IPostRepository;
-    commetnRepository: ICommentRepository;
+    commentRepository: ICommentRepository;
     text: string;
     postId: string;
     userId: string;
     parentId: string;
 }) => {
-    const post = await postRepository.findById(postId);
+    // Use Promise.all with conditional promise for parent comment
+    const [post, parentComment] = await Promise.all([
+        postRepository.findById(postId),
+        parentId ? commentRepository.findById(parentId) : Promise.resolve(null),
+    ]);
 
-    if (!post) throw ErrorResponse.badRequest('invalid post');
+    if (!post) throw ErrorResponse.badRequest('Invalid post');
+
+    if (parentId && !parentComment)
+        throw ErrorResponse.badRequest('Invalid parent comment');
 
     const comment = {
         parentId,
@@ -30,12 +37,12 @@ export const addComment = async ({
         postId,
     };
 
-    const newComment = await commetnRepository.createComment(comment);
+    const newComment = await commentRepository.createComment(comment);
 
     return {
         status: HttpStatusCode.OK,
         success: true,
-        message: "Comment added successfully",
-        data: newComment
-    }
+        message: 'Comment added successfully',
+        data: newComment,
+    };
 };

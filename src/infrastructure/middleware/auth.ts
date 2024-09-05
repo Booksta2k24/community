@@ -8,10 +8,8 @@ export async function auth(req: Req, res: Res, next: Next) {
     const tokenService = new GenerateToken();        
     
     // Getting the token from the request header
-    // const token = req.header("Authorization")?.split(' ')[1];
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxMjM0NTYiLCJpYXQiOjE3MjUwMTczNTksImV4cCI6MTcyNTg4MTM1OX0.51h-GuB4z0HSxFcWsYaHoye8AKGtZi40NKszhZbMQ0w"
-    console.log(token,'tokentokentokentoken');
-    
+    const token = req.header("Authorization")?.split(' ')[1];
+
     // If no token is found, return an unauthorized error
     if (!token) {
         throw ErrorResponse.unauthorized("Unauthorized access, not token");

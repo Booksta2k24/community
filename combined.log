@@ -1,78 +1,17 @@
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 13:48:24"}
-{"level":"error","message":"Database connection error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed","service":"book-service","stack":"Error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed\n    at Function.internalError (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\usecase\\handler\\errorResponse.ts:33:14)\n    at C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:15:29\n    at Generator.throw (<anonymous>)\n    at rejected (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:6:65)","status":500,"timestamp":"2024-08-30 13:48:54"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 13:50:45"}
-{"level":"error","message":"Database connection error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed","service":"book-service","stack":"Error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed\n    at Function.internalError (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\usecase\\handler\\errorResponse.ts:33:14)\n    at C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:15:29\n    at Generator.throw (<anonymous>)\n    at rejected (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:6:65)","status":500,"timestamp":"2024-08-30 13:51:15"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 13:51:33"}
-{"level":"error","message":"Database connection error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed","service":"book-service","stack":"Error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed\n    at Function.internalError (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\usecase\\handler\\errorResponse.ts:33:14)\n    at C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:15:29\n    at Generator.throw (<anonymous>)\n    at rejected (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:6:65)","status":500,"timestamp":"2024-08-30 13:52:03"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:52:23"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:54:07"}
-{"level":"error","message":"Database connection error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed","service":"book-service","stack":"Error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed\n    at Function.internalError (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\usecase\\handler\\errorResponse.ts:33:14)\n    at C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:15:29\n    at Generator.throw (<anonymous>)\n    at rejected (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:6:65)","status":500,"timestamp":"2024-08-30 16:54:37"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:58:07"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:58:11"}
-{"level":"error","message":"Database connection error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed","service":"book-service","stack":"Error: MongooseServerSelectionError: connect ECONNREFUSED ::1:27017 database connection failed\n    at Function.internalError (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\usecase\\handler\\errorResponse.ts:33:14)\n    at C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:16:29\n    at Generator.throw (<anonymous>)\n    at rejected (C:\\Users\\ADWAITH\\Desktop\\Booksta2k24\\dev\\Booksta2k24\\src\\infrastructure\\config\\db.ts:6:65)","status":500,"timestamp":"2024-08-30 16:58:42"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:58:54"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 16:58:54"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 16:59:19"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 16:59:19"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:32:21"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:32:21"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:33:27"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:33:27"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:33:28"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:33:29"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:34:42"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:34:42"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:34:43"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:34:43"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:54:35"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:54:35"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:56:00"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:56:00"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:56:02"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:56:02"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:56:08"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:56:08"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:56:16"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:56:16"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:56:46"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:56:46"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:57:09"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:57:09"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:57:37"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:57:37"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:58:33"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:58:33"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 19:59:06"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 19:59:06"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:00:25"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:00:25"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:00:27"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:00:27"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:00:29"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:00:29"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:00:31"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:00:31"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:00:36"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:00:36"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:01:22"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:01:22"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:02:14"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:02:14"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:02:28"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:02:28"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:07:05"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:07:05"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 20:11:24"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 20:11:24"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 21:44:37"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 21:44:37"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 21:45:26"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 21:45:26"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 21:47:04"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 21:47:04"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 21:47:13"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 21:47:13"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-30 21:47:20"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-30 21:47:20"}
-{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-31 00:10:26"}
-{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-31 00:10:26"}
+
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-17 18:47:12"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-17 18:47:12"}
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-17 18:48:33"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-17 18:48:33"}
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-17 18:48:43"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-17 18:48:44"}
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-19 14:50:17"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-19 14:50:17"}
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-19 14:54:24"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-19 14:54:24"}
+
+
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-08-19 15:52:43"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-08-19 15:52:43"}
+{"level":"info","message":"Server running at http://localhost:4000","service":"book-service","timestamp":"2024-09-05 17:23:35"}
+{"level":"info","message":"Database connected successfully","service":"book-service","timestamp":"2024-09-05 17:23:35"}

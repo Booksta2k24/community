@@ -17,4 +17,5 @@ export class PostRepository implements IPostRepository {
     findById(postId:string){
         return  findById({postId,postModel:this.postModel})
     }
+
 }
