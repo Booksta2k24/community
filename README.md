@@ -1,30 +1,124 @@
-## **Booksta: Community for Readers and Writers :**
+# Booksta: Community for Readers and Writers
 
-**Welcome to Booksta!** We're passionate about creating a vibrant community for both readers and writers. Our platform brings together book enthusiasts from all walks of life, offering a space where literary lovers can connect, share thoughts, and inspire one another. Whether you're an avid reader searching for your next great book or a writer seeking feedback and collaboration, Booksta is your ideal destination.
+## Overview
 
-Our mission is to foster meaningful interactions, celebrate the art of storytelling, and support the growth of emerging and seasoned voices in the literary world. Join us on this exciting journey to build a community where every story matters and every voice is heard.
+**Booksta** is a vibrant community platform designed for both readers and writers. Whether you're a book enthusiast looking for recommendations or a writer eager to share your stories, Booksta is the perfect space to connect, collaborate, and engage with like-minded individuals. Our platform allows users to share posts, interact with content, and publish their own books.
 
-### Tech Stack
+---
 
-**Booksta** utilizes a micro-services architecture to ensure scalability and flexibility, with both mobile and web applications supporting various features. Here’s a brief overview of the technology used in our project:
+## Key Features
 
-- **Micro-services Pattern**: Our system is designed with a micro-services architecture to ensure modularity, scalability, and maintainability.
-- **Mobile & Web Applications**: Available for both mobile and web platforms, offering seamless access to our community features.
+- **Post Creation**: Users can create and share text and file-based posts with the community.
+- **User Engagement**: Readers can like and comment on posts, promoting an interactive environment.
+- **Text Editor for Writers**: A built-in text editor lets writers format and publish their stories within the app.
+- **Book Publishing**: Writers can publish books, with a minimum of 30 pages available as a preview before purchase.
+- **Payment Integration**: Secure payment gateways ensure seamless transactions for book purchases.
+  
+---
 
-### Key Features
+## Tech Stack
 
-**Booksta** provides a rich set of features to enhance the reading and writing experience:
+- **Architecture**: Microservices for modularity, scalability, and ease of maintenance.
+- **Frontend**: Web and mobile applications with seamless user interfaces.
+- **Backend**: RESTful API services built with **Node.js** and **Express**.
+- **Database**: MongoDB for managing user data, posts, comments, and other resources.
 
-1. **Post Creation**: Users can create and share posts in various formats including text and files. This allows for versatile content sharing within the community.
-2. **Engagement**: Viewers can interact with posts by adding likes and comments, fostering a dynamic and engaging environment.
-3. **Text Editor for Writers**: Writers can publish their works using a built-in text editor, allowing them to format and prepare their content within the application.
-4. **Book Publishing**: Authors can publish their books directly on the platform. Readers can preview a minimum of 30 pages before being prompted for payment. Publishers have the flexibility to set the price for their books.
-5. **Payment Integration**: Secure payment processing ensures that readers can easily purchase and access full books, while publishers receive compensation for their work.
+---
 
-### Repository
+## API Endpoints
 
-Explore our GitHub repository to access the source code, contribute to the project, or learn more about the development:
+### Post Management
 
-- **GitHub Repository**: [Booksta GitHub](https://github.com/Booksta2k24)
+#### **Create a Post**
+- **URL**: `/add-post`
+- **Method**: `POST`
+- **Middleware**: `auth`, `upload`
+- **Description**: Allows authenticated users to create and upload a new post.
+- **Request Body**: Multipart form data, including text and files.
 
-**Join us at Booksta** and become a part of a growing community where your voice matters and every story is celebrated. Whether you're here to read, write, or engage, we welcome you to be a part of our literary journey!
+#### **Like a Post**
+- **URL**: `/:postId/like`
+- **Method**: `PATCH`
+- **Middleware**: `auth`
+- **Description**: Like a post by its unique `postId`.
+
+#### **Unlike a Post**
+- **URL**: `/:postId/unlike`
+- **Method**: `PATCH`
+- **Middleware**: `auth`
+- **Description**: Unlike a post by its unique `postId`.
+
+### Comment Management
+
+#### **Add a Comment**
+- **URL**: `/:postId/comment`
+- **Method**: `POST`
+- **Middleware**: `auth`
+- **Description**: Adds a comment to a specific post.
+
+#### **Get All Comments for a Post**
+- **URL**: `/:postId/comments`
+- **Method**: `GET`
+- **Middleware**: `auth`
+- **Description**: Fetch all comments for a specific post.
+
+#### **Delete a Comment**
+- **URL**: `/:postId/comment/:commentId`
+- **Method**: `DELETE`
+- **Middleware**: `auth`
+- **Description**: Deletes a comment by its `commentId`.
+
+#### **Update a Comment**
+- **URL**: `/:postId/comment/:commentId`
+- **Method**: `PUT`
+- **Middleware**: `auth`
+- **Description**: Updates a comment by its `commentId`.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js**
+- **npm** (Node Package Manager)
+- **MongoDB**
+
+### Installation
+
+1. Clone the repository:
+
+    ```bash
+    git clone https://github.com/sayand-ak/booksta.git
+    cd booksta
+    ```
+
+2. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+3. Set up environment variables:
+
+    Create a `.env` file in the root of your project and include the following values:
+
+    ```
+    MONGODB_URI=<your-mongodb-uri>
+    JWT_SECRET=<your-jwt-secret>
+    ```
+
+4. Run the server:
+
+    ```bash
+    npm start
+    ```
+
+5. Access the application via `http://localhost:3000`.
+
+---
+
+## Directory Structure
+
