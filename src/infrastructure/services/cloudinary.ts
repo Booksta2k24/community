@@ -12,8 +12,7 @@ export class CloudinaryService {
     }
 
     async uploadImage(buffer: Buffer, folder: string): Promise<ImageObj> {
-        console.log(buffer, "buffer---------------");
-        
+                
         return new Promise((resolve, reject) => {
             cloudinary.uploader.upload_stream(
                 { folder: folder },

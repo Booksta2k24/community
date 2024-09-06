@@ -24,7 +24,7 @@ const postSchema: Schema<IPost & Document> = new Schema<IPost & Document>({
         type: String,
     },
     content: {
-        type: [Schema.Types.Mixed],
+        type: Schema.Types.Mixed,
         required: true
     },
     description: {
