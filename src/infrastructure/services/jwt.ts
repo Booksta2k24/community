@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import 'dotenv/config';
 import { DecodedToken } from "../../domain/types/decodedToken";
 import ErrorResponse from "../../usecase/handler/errorResponse";
-import { IJwt } from "../../usecase/interface/services/IJwt";
+import { IJwt } from "../../usecase/usecase/interface/services/IJwt";
 
 
 export class GenerateToken implements IJwt {
@@ -42,9 +42,6 @@ export class GenerateToken implements IJwt {
 
                 // Type assertion to ensure that decoded is of type DecodedToken
                 const decodedToken = decoded as DecodedToken;
-
-                console.log(decodedToken);
-
 
                 if (!decodedToken.userId) {
                     return reject(ErrorResponse.badRequest("Invalid token structure"));

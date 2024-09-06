@@ -1,22 +1,19 @@
 import { Next, Req, Res } from "../../infrastructure/types/expressTypes";
 import ErrorResponse from "./errorResponse";
 
-const errorHandler = (err: any, req: Req, res: Res, next: Next) => {
-
+const errorHandler = (err: any, req: Req, res: Res, next: Next) => {    
     console.log(err);
-
 
     if (err instanceof ErrorResponse) {
 
-        res.status(err.status).json({
+        return res.status(err.status).json({
             success: false,
             message: err.message,
         });
     }
-    
-    res
-        .status(500)
-        .json({ success: false, status: 500, message: "Something went wrong" });
+
+    return res.status(500).json({ success: false, status: 500, message: "Something went wrong" });
 };
+
 
 export default errorHandler;

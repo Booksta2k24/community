@@ -7,14 +7,31 @@ import { IPostRepository } from "../../interface/repository/IpostRepository";
 import { ICloudinary } from "../../interface/services/ICloudinary";
 import { IResponse } from "../../interface/services/IResponse";
 
-export const addPost = async(
+export const editPost = async(
     postData: IPost,
     postImages: File[],
+    postId: string,
     postRepository: IPostRepository,
     cloudinary: ICloudinary
 ): Promise<IResponse> => {
     try {
 
+        const existPost = await postRepository.findById(postId);
+
+        if (!existPost) {
+            throw ErrorResponse.notFound("Post not found")
+        }
+
+        //delete all existing images
+        if (existPost && existPost.content) {
+            if (Array.isArray(existPost.content)) {
+                for (let i = 0; i < existPost.content.length; i++) {
+                    cloudinary.deleteImage(existPost.content[i].publicId); 
+                }
+            } 
+        }
+
+        //add newly received images
         if (Object.values(postImages).length > 0) {    
             
             const imageUploadPromises = Object.values(postImages).flat().map(file => {
@@ -34,15 +51,17 @@ export const addPost = async(
 
             // Add image data to postData
             postData.content = uploadedImages.map(image => image);
-        }         
+        } 
 
-        const response = await postRepository.addPost(postData);
+        //adding post id to post data
+        postData.id = postId;
+        const response = await postRepository.editPost(postData);        
         
         if (response) {
             return {
                 status: HttpStatusCode.OK,
                 success: true,
-                message: "Post added successfully",
+                message: "Post edited successfully",
                 data: response
             }
         } else {

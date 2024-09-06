@@ -12,6 +12,8 @@ import {
     likePost,
     unLikePost,
     updateComment,
+    editPost,
+    deletePost
 } from './post';
 
 export class PostUsecase {
@@ -37,14 +39,33 @@ export class PostUsecase {
         this._commentRepository = commentRepository;
     }
 
-    addPost(postData: IPost, postImages: File[]) {
-        return addPost(
+    async addPost(postData: IPost, postImages: File[]) {
+        return await addPost(
             postData,
             postImages,
             this._postRepository,
             this._cloudinary
         );
     }
+
+    editPost(postData: IPost, postImage: File[], postId: string) {
+        return editPost(
+            postData,
+            postImage,
+            postId,
+            this._postRepository,
+            this._cloudinary
+        )
+    }
+
+    deletePost(postId: string) {
+        return deletePost(
+            postId,
+            this._postRepository,
+            this._cloudinary
+        )
+    }
+
     async likePost({ postId, userId }: { postId: string; userId: string }) {
         return await likePost({
             postId,

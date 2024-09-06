@@ -16,7 +16,7 @@ export class PostAdapter {
     }
 
     // Method to add a post
-    async addPost(req:Req, res:Res, next:Next){
+    async addPost(req:Req, res:Res, next:Next) {
         try {           
 
             // Create a postData object with the userId and the body of the request
@@ -34,6 +34,42 @@ export class PostAdapter {
 
         } catch (error) {
             // If an error occurs, call the next middleware
+            next(error);
+        }
+    }
+
+    async editPost(req: Req, res: Res, next: Next) {
+        try {
+            const postData = { userId: req.userId,  ...req.body};
+            const postId = req.params.postId;
+
+            const response = await this._postUsecase.editPost(postData, req.files as File[], postId);
+
+            res.status(response.status).json({
+                message: response.message,
+                data: response.data,
+                success: response.success
+            });
+
+
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    async deletePost(req: Req, res: Res, next: Next) {
+        try {
+            const postId = req.params.postId;
+
+            const response = await this._postUsecase.deletePost(postId);
+
+            res.status(response.status).json({
+                message: response.message,
+                success: response.success
+            });
+
+
+        } catch (error) {
             next(error);
         }
     }

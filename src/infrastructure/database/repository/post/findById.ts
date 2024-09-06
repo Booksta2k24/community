@@ -1,3 +1,4 @@
+import { IPost } from '../../../../domain/post';
 import PostModel from '../../models/post';
 
 export const findById = async ({
@@ -7,5 +8,7 @@ export const findById = async ({
     postId: string;
     postModel: typeof PostModel;
 }) => {
-    return await postModel.findOne({ _id: postId });
+    const result = await postModel.findOne({ _id: postId });
+    return result;
+    
 };
