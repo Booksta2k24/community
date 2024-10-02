@@ -15,6 +15,7 @@ import {
     editPost,
     deletePost
 } from './post';
+import { getAllPost } from './post/getAllPost';
 
 export class PostUsecase {
     private readonly _postRepository: IPostRepository;
@@ -157,5 +158,9 @@ export class PostUsecase {
             text,
             commentRepository: this._commentRepository,
         });
+    }
+
+    async getAllPost() {
+        return await getAllPost({postRepository: this._postRepository,})
     }
 }

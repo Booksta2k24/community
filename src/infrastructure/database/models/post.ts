@@ -27,6 +27,9 @@ const postSchema: Schema<IPost & Document> = new Schema<IPost & Document>({
         type: Schema.Types.Mixed,
         required: true
     },
+    images: {
+        type: [ImageObjSchema],
+    },
     description: {
         type: String,
         required: true

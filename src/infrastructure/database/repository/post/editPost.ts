@@ -5,10 +5,7 @@ export const editPost = async (
     postData: IPost,
     postModel: typeof PostModel
 ): Promise<IPost | null> => {
-    try {
-
-        console.log(postData.id);
-        
+    try {        
         // Check if postData.id exists and is valid
         if (!postData.id) {
             throw new Error("Post ID is required");
@@ -20,6 +17,7 @@ export const editPost = async (
                 title: postData.title,
                 description: postData.description,
                 content: postData.content,
+                images: postData.images
             },
             { new: true } // Returns the updated document
         );

@@ -18,12 +18,11 @@ export class PostAdapter {
     // Method to add a post
     async addPost(req:Req, res:Res, next:Next) {
         try {           
-
             // Create a postData object with the userId and the body of the request
             const postData = { userId: req.userId, ...req.body};
 
             // Call the addPost method of the PostUsecase with the postData and the files
-            const response = await this._postUsecase.addPost(postData, req.files as File[]);
+            const response = await this._postUsecase.addPost(postData, req.files as File[]);            
 
             // Send the response back to the client
             res.status(response.status).json({
@@ -34,6 +33,21 @@ export class PostAdapter {
 
         } catch (error) {
             // If an error occurs, call the next middleware
+            next(error);
+        }
+    }
+
+    async getAllPost(req:Req, res: Res, next: Next) {
+        try {
+            const response = await this._postUsecase.getAllPost();
+
+            res.status(response.status).json({
+                message: response.message,
+                data: response.data,
+                success: response.success
+            });
+
+        } catch (error) {
             next(error);
         }
     }
@@ -51,7 +65,6 @@ export class PostAdapter {
                 success: response.success
             });
 
-
         } catch (error) {
             next(error);
         }
@@ -67,7 +80,6 @@ export class PostAdapter {
                 message: response.message,
                 success: response.success
             });
-
 
         } catch (error) {
             next(error);

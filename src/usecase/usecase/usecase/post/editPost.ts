@@ -50,7 +50,7 @@ export const editPost = async(
             const uploadedImages: ImageObj[] = await Promise.all(imageUploadPromises);
 
             // Add image data to postData
-            postData.content = uploadedImages.map(image => image);
+            postData.images = uploadedImages.map(image => image);
         } 
 
         //adding post id to post data

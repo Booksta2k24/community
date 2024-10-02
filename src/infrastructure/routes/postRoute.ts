@@ -7,9 +7,14 @@ import upload from '../middleware/uploadImage';
 const postRouter = express.Router();
 
 postRouter.route("/post")
-    .post(auth, upload, (req: Request, res:Response, next:NextFunction) => {                       
+    .post(upload, (req: Request, res:Response, next:NextFunction) => { 
+            console.log(req.files);
+                                  
             postAdapter.addPost(req, res, next);
-    });
+    })
+    .get((req: Request, res: Response, next: NextFunction) => {
+        postAdapter.getAllPost(req, res, next);
+    })
 
 postRouter.route("/post/:postId")
     .patch(auth, upload, (req: Request, res: Response, next: NextFunction) => {        
