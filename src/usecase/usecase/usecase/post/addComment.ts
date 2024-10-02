@@ -1,4 +1,3 @@
-import { IComment } from '../../../../domain/comments';
 import { HttpStatusCode } from '../../../../domain/types/httpStatusCodes';
 import ErrorResponse from '../../../handler/errorResponse';
 import { ICommentRepository } from '../../interface/repository/ICommentRepository';

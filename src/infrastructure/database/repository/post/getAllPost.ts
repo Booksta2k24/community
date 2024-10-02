@@ -1,13 +1,11 @@
 import PostModel from '../../models/post';
 
-export const findById = async ({
-    postId,
+export const getAllPost = async ({
     postModel,
 }: {
-    postId: string;
     postModel: typeof PostModel;
 }) => {
-    const result = await postModel.findOne({ _id: postId });
+    const result = await postModel.find();
     return result;
 
 };

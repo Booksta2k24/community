@@ -13,8 +13,7 @@ export const addPost = async(
     postRepository: IPostRepository,
     cloudinary: ICloudinary
 ): Promise<IResponse> => {
-    try {
-
+    try {        
         if (Object.values(postImages).length > 0) {    
             
             const imageUploadPromises = Object.values(postImages).flat().map(file => {
@@ -33,7 +32,7 @@ export const addPost = async(
             const uploadedImages: ImageObj[] = await Promise.all(imageUploadPromises);
 
             // Add image data to postData
-            postData.content = uploadedImages.map(image => image);
+            postData.images = uploadedImages.map(image => image);
         }         
 
         const response = await postRepository.addPost(postData);

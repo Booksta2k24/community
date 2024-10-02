@@ -2,6 +2,7 @@ import { IPost } from "../../../domain/post";
 import { IPostRepository } from "../../../usecase/usecase/interface/repository/IpostRepository";
 import PostModel from "../models/post";
 import {addPost, deletePost, editPost, findById} from './post'
+import { getAllPost } from "./post/getAllPost";
 
 
 export class PostRepository implements IPostRepository {
@@ -26,4 +27,7 @@ export class PostRepository implements IPostRepository {
         return findById({postId, postModel: this.postModel})
     }
 
+    getAllPost() {
+        return getAllPost({postModel: this.postModel});
+    }
 }

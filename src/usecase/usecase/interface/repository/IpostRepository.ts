@@ -9,4 +9,5 @@ export interface IPostRepository {
     editPost(postData:IPost): Promise<IPost | null>;
     findById(postId:string):Promise<IPost | null >;   
     deletePost(postId: string):Promise<boolean> 
+    getAllPost(): Promise<IPost[]>
 }
