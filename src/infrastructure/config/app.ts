@@ -7,11 +7,13 @@ import morgan from 'morgan';
 import errorHandler from '../../usecase/handler/errorHandler';
 import postRouter from '../routes/postRoute';
 import helmet from 'helmet';
-import { frameguard } from 'helmet';
+import { consumeUserData } from '../messaging/rabbitmqConnection';
 
 export const app = express();
 
 app.use(cors({origin: "*"}))
+
+consumeUserData()
 
 app.use(
     helmet({

@@ -1,24 +1,28 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose,{Document,Model,Schema} from "mongoose";
 import { IUser } from "../../../domain/users";
 
+const userSchema: Schema = new Schema<IUser & Document>(
+    {
+        username:{
+            type:String,
+        },
+        email:{
+            type:String,
+        },
+        isBlock:{
+            default:false,
+            type:Boolean,
+        },
+        profileImage:{
+            type:String,
+        },
+        password:{
+            type:String
+        }
+    },{
+        timestamps:true
+    }
+)
 
-// Define a schema for the user model
-const userSchema: Schema<IUser & Document> = new Schema<IUser & Document>({
-    username: {
-        type: String,
-        required: true,
-    },
-    email: {
-        type: String,
-    },
-    password: {
-        type: String,
-    },
-});
-
-
-// Create a new Model for the user schema
-const UserModel = mongoose.model<IUser & Document>("User", userSchema);
-
-// Export the UserModel
-export default UserModel;
+const UserModel : Model<IUser & Document> = mongoose.model<IUser & Document>('User',userSchema)
+export default UserModel
