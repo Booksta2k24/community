@@ -4,7 +4,6 @@ import PostModel from "../models/post";
 import {addPost, deletePost, editPost, findById} from './post'
 import { getAllPost } from "./post/getAllPost";
 
-
 export class PostRepository implements IPostRepository {
     
     constructor(
